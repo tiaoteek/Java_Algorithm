@@ -20,7 +20,7 @@ public class Q001 {
         System.out.println("被除数：");
         int a = sc.nextInt();
         System.out.println("除数：");
-        int b = sc.nextInt();;
+        int b = sc.nextInt();
         long startTime = System.currentTimeMillis();
 //        long startTime = System.nanoTime();
         int c = divide(a,b);
@@ -67,7 +67,7 @@ public class Q001 {
             int quotient = 1;
             //防止溢出，保证value的2倍不超过最小值：0xc0000000 *2 = 0x00000000
             while (value >= 0xc0000000 && dividend <= value + value) {
-                //差和除数都以指数的方式递增
+                //差和除数都以指数(2倍)的方式递增
                 quotient += quotient;
                 value += value;
             }
